@@ -90,6 +90,9 @@ func (t *TaobaoRequest) GetResponse(methodName string, resp interface{}, session
     var topErr *TopError
 	fmt.Println(t.GetValues().Encode())
 	response, progErr := http.PostForm(t.GetReqUrl(), t.GetValues())
+    if progErr != nil {
+        return nil, progErr, topErr
+    }
 	fmt.Println(progErr)
 	data, progErr := ioutil.ReadAll(response.Body)
 	if progErr != nil {
