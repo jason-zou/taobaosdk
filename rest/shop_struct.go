@@ -7,19 +7,19 @@ type ShopScore struct {
 }
 
 type Shop struct {
-	AllCount    int        `json:"all_count" bson:"all_count"`
+	//AllCount    int        `json:"all_count" bson:"all_count"`
 	Bulletin    string     `json:"bulletin" bson:"bulletin,omitempty"`
 	Cid         int        `json:"cid" bson:"cid"`
-	Created     string     `json:"created" bson:"created"`
+	//Created     string     `json:"created" bson:"created"`
 	Desc        string     `json:"desc" bson:"desc"`
-	Modified    string     `json:"modified" bson:"modified"`
+	//Modified    string     `json:"modified" bson:"modified"`
 	Nick        string     `json:"nick" bson:"nick"`
 	PicPath     string     `json:"pic_path" bson:"pic_path"`
-	RemainCount int        `json:"remain_count" bson:"remain_count"`
+	//RemainCount int        `json:"remain_count" bson:"remain_count"`
 	ShopScore   *ShopScore `json:"shop_score" bson:"shop_score"`
 	Sid         int        `json:"sid" bson:"sid"`
 	Title       string     `json:"title" bson:"title"`
-	UsedCount   int        `json:"used_count" bson:"used_count"`
+	//UsedCount   int        `json:"used_count" bson:"used_count"`
 }
 
 type ShopGetResponse struct {
