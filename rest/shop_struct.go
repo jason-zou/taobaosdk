@@ -10,7 +10,6 @@ type ShopScore struct {
 	ServiceScore *ShopService `bson:"service_score"`                  //店铺30天内服务信息数据
 	Credit       string       `json:"credit" bson:"credit"`           //店铺等级
 	PraiseRate   float32      `json:"praise_rate" bson:"praise_rate"` //好评率
-	UpdatedTime  time.Time    `json:"updated_time" bson:"updated_time"`
 }
 
 //店铺半年内动态评分
@@ -22,7 +21,7 @@ type ShopKPS struct {
 
 type RateScore struct {
 	Score float32 `bson:"score"`
-	Rate  float32 `bson:"rate"` //与同行业
+	Rate  float32 `bson:"rate"` //与同行业水平的差值比率
 }
 
 //店铺30天内服务信息数据,可参考http://rate.taobao.com/user-rate-1588199389.htm
@@ -67,8 +66,8 @@ type Complaints struct {
 	ComCount  int     `bson:"com_count" json:"complaintsCount"` //被投诉总次数
 }
 type Shop struct {
-	AllCount     int        `json:"all_count" bson:"all_count"`
-	Bulletin     string     `json:"bulletin" bson:"bulletin,omitempty"`
+	AllCount     int        `json:"all_count" bson:"all_count"`         //已失效
+	Bulletin     string     `json:"bulletin" bson:"bulletin,omitempty"` //已失效
 	Cid          int        `json:"cid" bson:"cid"`
 	Created      string     `json:"created" bson:"created"`
 	Desc         string     `json:"desc" bson:"desc"`
@@ -81,6 +80,10 @@ type Shop struct {
 	Title        string     `json:"title" bson:"title"`
 	UsedCount    int        `json:"used_count" bson:"used_count"`
 	MainProducts string     `json:"main_products" bson:"main_products"`
+	Company      string     `json:"company" bson:"company"`   //店铺所属公司
+	Location     string     `json:"location" bson:"location"` //所在地
+	ShopType     string     `json:"shoptype" bson:"shoptype"`
+	UpdatedTime  time.Time  `json:"updated_time",bson:"updated_time"`
 }
 
 type ShopGetResponse struct {
