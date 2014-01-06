@@ -77,6 +77,7 @@ type Shop struct {
 	RemainCount  int        `json:"remain_count" bson:"remain_count"`
 	ShopScore    *ShopScore `json:"shop_score" bson:"shop_score"`
 	Sid          int        `json:"sid" bson:"sid"`
+	Sellerid     int        `json:"sellerid" bson:"sellerid"`
 	Title        string     `json:"title" bson:"title"`
 	UsedCount    int        `json:"used_count" bson:"used_count"`
 	MainProducts string     `json:"main_products" bson:"main_products"`
