@@ -77,13 +77,15 @@ type Shop struct {
 	RemainCount  int        `json:"remain_count" bson:"remain_count"`
 	ShopScore    *ShopScore `json:"shop_score" bson:"shop_score"`
 	Sid          int        `json:"sid" bson:"sid"`
-	Sellerid     int        `json:"sellerid" bson:"sellerid"`
+	Sellerid     int        `json:"sellerid" bson:"seller_id"`
 	Title        string     `json:"title" bson:"title"`
 	UsedCount    int        `json:"used_count" bson:"used_count"`
-	MainProducts string     `json:"main_products" bson:"main_products"`
-	Company      string     `json:"company" bson:"company"`   //店铺所属公司
-	Location     string     `json:"location" bson:"location"` //所在地
-	ShopType     string     `json:"shoptype" bson:"shoptype"`
+	MainProducts string     `json:"main_products" bson:"main_products"` //主营产品
+	Company      string     `json:"company" bson:"company"`             //店铺所属公司
+	Location     string     `json:"location" bson:"location"`           //所在地
+	ShopType     string     `json:"shoptype" bson:"shop_type"`
+	Synced       bool       `json:"synced" bson:"synced"` //是否已经同步到线下了
+	ShopLink     string     `json:"shoplink" bson:"shop_link"`
 	UpdatedTime  time.Time  `json:"updated_time",bson:"updated_time"`
 }
 
