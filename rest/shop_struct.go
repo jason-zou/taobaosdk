@@ -86,7 +86,7 @@ type Shop struct {
 	ShopType     string     `json:"shoptype" bson:"shop_type"`
 	Synced       bool       `json:"synced" bson:"synced"` //是否已经同步到线下了
 	ShopLink     string     `json:"shoplink" bson:"shop_link"`
-	UpdatedTime  time.Time  `json:"updated_time",bson:"updated_time"`
+	UpdatedTime  time.Time  `json:"updated_time" bson:"updated_time"`
 }
 
 type ShopGetResponse struct {
