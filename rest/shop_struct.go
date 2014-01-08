@@ -66,25 +66,18 @@ type Complaints struct {
 	ComCount  int     `bson:"com_count" json:"complaintsCount"` //被投诉总次数
 }
 type Shop struct {
-	AllCount     int        `json:"all_count" bson:"all_count"`         //已失效
-	Bulletin     string     `json:"bulletin" bson:"bulletin,omitempty"` //已失效
 	Cid          int        `json:"cid" bson:"cid"`
-	Created      string     `json:"created" bson:"created"`
 	Desc         string     `json:"desc" bson:"desc"`
-	Modified     string     `json:"modified" bson:"modified"`
 	Nick         string     `json:"nick" bson:"nick"`
 	PicPath      string     `json:"pic_path" bson:"pic_path"`
-	RemainCount  int        `json:"remain_count" bson:"remain_count"`
 	ShopScore    *ShopScore `json:"shop_score" bson:"shop_score"`
 	Sid          int        `json:"sid" bson:"sid"`
 	Sellerid     int        `json:"sellerid" bson:"seller_id"`
 	Title        string     `json:"title" bson:"title"`
-	UsedCount    int        `json:"used_count" bson:"used_count"`
 	MainProducts string     `json:"main_products" bson:"main_products"` //主营产品
 	Company      string     `json:"company" bson:"company"`             //店铺所属公司
 	Location     string     `json:"location" bson:"location"`           //所在地
 	ShopType     string     `json:"shoptype" bson:"shop_type"`
-	Synced       bool       `json:"synced" bson:"synced"` //是否已经同步到线下了
 	ShopLink     string     `json:"shoplink" bson:"shop_link"`
 	UpdatedTime  time.Time  `json:"updated_time" bson:"updated_time"`
 }
