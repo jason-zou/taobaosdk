@@ -42,12 +42,10 @@ type PropImgs struct {
 }
 
 type Item struct {
-	DetailUrl       string    `json:"detail_url" bson:"detail_url"`
 	NumIid          int       `json:"num_iid" bson:"num_iid"`
 	Title           string    `json:"title" bson:"title"`
 	Nick            string    `json:"nick" bson:"nick"`
 	Type            string    `json:"type" bson:"type"`
-	Desc            string    `json:"desc" bson:"desc"`
 	Cid             int       `json:"cid" bson:"cid"`
 	PicUrl          string    `json:"pic_url" bson:"pic_url"`
 	Num             int       `json:"num" bson:"num"`
